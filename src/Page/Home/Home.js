@@ -114,8 +114,8 @@ const Home = () => {
 
   return (
     <div>
-      <Card style={{ width: "21rem" }}>
-        <BsSun className="Sun"rotate={90}/>
+      <Card style={{ height:"35rem",width:"auto" }} >
+        <BsSun className="Sun"/>
         
         <Card.Body>Drying</Card.Body>
         <ListGroup className="list-group-flush">
