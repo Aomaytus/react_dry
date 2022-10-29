@@ -1,9 +1,12 @@
 import React from "react";
-import Navber from "./Navber";
-const Index = () => {
+import Navber from "./Navber/Navber";
+
+const Index = (props) => {
   return (
     <div>
       <Navber/>
+      <p>{props.may}</p>
+      
     </div>
   );
 };
