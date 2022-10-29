@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #ffffff47;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(48, 48, 48);
+}
+
+
+
+
+.bt_Dry{
+  border: 0px;
+  background-color: rgba(240, 248, 255, 0);
+}
+.Home_Weather{
+  font-size:80%;
+  width: 30%;
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  padding: 5px;
+  /* border-radius: 5px; */
+}
+.Home_Weather_bt{
+width: 100%;
+height: 50px;
+background-color: rgb(248, 255, 161);
+border: 0px;
+border-radius: 10px ;
+}
+.tob_Navber{
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50px;
+  color: rgb(0, 0, 0);
+
+  align-items: flex-end;
+  text-align: right;
+
+  position: relative;
+}
+.Navber_bt{
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 40px;
+  width: 85px;
+  border: 0px;
+  border-radius: 10px 10px 0px 0px;
+  color: rgb(79, 79, 79);
+  background-color: #cccccc;
+  margin-bottom: 10px;
+}
+.Navber_btOver{
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 40px;
+  width: 85px;
+  border: 0px;
+  border-radius: 10px 10px 0px 0px;
+  color: rgb(44, 44, 44);
+  background-color: rgb(95, 194, 255);
+  text-shadow: 2px 2px 4px #bebebe;
+  margin-bottom: 10px;
+}
+.tob_Navber_icon{
+  margin: 5px;
+}
+.Navber_sty{
+height: 30px;
+background-color: #000000;
+width: 100%;
+text-align: center;
+justify-content: center;
+justify-items: center;
+align-items: center;
+align-content: center;
+padding-bottom: 20px;
+}
+.Sun{
+  
+  height: 50%;
+  width: 50%;
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 23%;
+}
+.Cloud{
+height: 50px;
+width: 50px;
+justify-content: flex-end;
+}
+.Home_Card{
+  height: 50px;
+  margin-bottom: 60px;
+}
