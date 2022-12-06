@@ -2,17 +2,18 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
-import Home from "./Home/Home";
-import Dry from "./Dry/Dry";
-import About from "./About/About";
-import Warn from "./Warn/Warn";
-import OutDry from "./Home/OutDry";
+import Home from "../Home/Home";
+import Dry from "../Dry/Dry";
+
+import Warn from "../Warn/Warn";
+import OutDry from "../Home/OutDry";
 import Stat from "./Navbar_tob";
 import { Routes, Route, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
-function Navber() {
-  const [Bt1, SetBt1] = useState("Navber_bt");
+import INpost from "../INpost";
+function Navber(props) {
+  const [Bt1, SetBt1] = useState("Navber_btOver");
   const [Bt2, SetBt2] = useState("Navber_bt");
   const [Bt3, SetBt3] = useState("Navber_bt");
   const StBt1 = () => {
@@ -30,6 +31,8 @@ function Navber() {
     SetBt1("Navber_bt");
     SetBt2("Navber_bt");
   };
+  useEffect(() => {});
+ 
   return (
     <>
       <Stat />
@@ -41,14 +44,21 @@ function Navber() {
         <Route path="Warn" element={<Warn />} />
         <Route path="OutDry" element={<OutDry />} />
       </Routes>
+
       <div>
-        <Navbar fixed="bottom"  collapseOnSelect  bg="dark" variant="dark" className="Navber_sty">
+        <Navbar
+          fixed="bottom"
+          collapseOnSelect
+          bg="dark"
+          variant="dark"
+          className="Navber_sty"
+        >
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Nav className="Navber_sty">
             <Link to="/">
               <Nav.Link href="#home">
                 <button className={Bt1} onClick={StBt1}>
-                  Home
+                  Home <INpost/>
                 </button>{" "}
               </Nav.Link>
             </Link>
@@ -66,7 +76,6 @@ function Navber() {
                 </button>{" "}
               </Nav.Link>
             </Link>
-           
           </Nav>
         </Navbar>
       </div>

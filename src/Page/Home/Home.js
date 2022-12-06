@@ -12,8 +12,15 @@ import { Switch } from "antd";
 import { db } from "../firebase";
 import { uid } from "uid";
 import { set, ref, onValue, update, remove } from "firebase/database";
-var InTem, InHum, InLux, SetHum, SetTem, SetHr, SetMin;
-const Home = () => {
+import Post from "../Post";
+var InTem = 0,
+  InHum = 0,
+  InLux = 0,
+  SetHum = 0,
+  SetTem = 0,
+  SetHr = 0,
+  SetMin = 0;
+const Home = (props) => {
   const [todo, setTodo] = useState();
   const [todos, setTodos] = useState();
   const [isEdit, setIsEdit] = useState(false);
@@ -27,7 +34,13 @@ const Home = () => {
       setTodos([]);
       const data = snapshot.val();
       InTem = data.Fram.TemF;
+      if (InTem <= 0) {
+        InTem = 0;
+      }
       InHum = data.Fram.HumF;
+      if (InHum >= 200) {
+        InHum = 0;
+      }
       InLux = data.Fram.LuxF;
       SetTem = data.Day_Add.Tem;
       SetHum = data.Day_Add.Hum;
@@ -114,9 +127,9 @@ const Home = () => {
 
   return (
     <div>
-      <Card style={{ height:"35rem",width:"auto" }} >
-        <BsSun className="Sun"/>
-        
+      <Card style={{ height: "28.5rem", width: "100%" }}>
+        <BsSun className="Sun" />
+
         <Card.Body>Drying</Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item>
@@ -149,15 +162,21 @@ const Home = () => {
                 </tbody>
               </Table>
             </div>
-            <div style={{ textAlign: "right" }}>
+            <Switch checked={GetSw} onClick={toggle1}
+           checkedChildren="Start"
+           unCheckedChildren="Stop"
+          /> 
+          <div style={{ textAlign: "right" }}>
               <button onClick={Reset_val}>Reset</button>
             </div>
           </ListGroup.Item>
         </ListGroup>
-        <Card.Body>
-          <Switch checked={GetSw} onClick={toggle1} />
-        </Card.Body>
+       
       </Card>
+      <Post />
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 };

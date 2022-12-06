@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Switch } from "antd";
 import { Card } from "antd";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { uid } from "uid";
 import {
   set,
@@ -164,32 +164,34 @@ const Setting = () => {
     });
   };
   const gridStyle = {
-    width: "20%",
+    width: "25%",
     textAlign: "center",
   };
   return (
     <div>
       <Card title="Setting">
         <Card.Grid style={gridStyle}>
-          Heater 1
+          Heater1
           <Switch checked={GetSw1} onClick={toggle1} />
         </Card.Grid>
         <Card.Grid style={gridStyle}>
-          Heater 2 <Switch checked={GetSw2} onClick={toggle2} />
+          Heater2 <Switch checked={GetSw2} onClick={toggle2} />
         </Card.Grid>
         <Card.Grid style={gridStyle}>
-          Heater 3 <Switch checked={GetSw3} onClick={toggle3} />
+          Heater3 <Switch checked={GetSw3} onClick={toggle3} />
         </Card.Grid>
         <Card.Grid style={gridStyle}>
-          Heater 4 <Switch checked={GetSw4} onClick={toggle4} />
+          Heater4 <Switch checked={GetSw4} onClick={toggle4} />
         </Card.Grid>
       </Card>
       <Card>
         <Card.Grid style={gridStyle}>
-          Fan 1 <Switch checked={GetSw5} onClick={toggle5} />
+          Fan heat 
+          {/* dissipation */}
+           <Switch checked={GetSw5} onClick={toggle5} />
         </Card.Grid>
         <Card.Grid style={gridStyle}>
-          Fan 2 <Switch checked={GetSw6} onClick={toggle6} />
+          Fan ventilate <Switch checked={GetSw6} onClick={toggle6} />
         </Card.Grid>
       </Card>
       <br />

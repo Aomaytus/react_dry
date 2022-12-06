@@ -52,9 +52,9 @@ border-radius: 10px ;
   height: 40px;
   width: 85px;
   border: 0px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 5px 5px 5px 5px;
   color: rgb(79, 79, 79);
-  background-color: #cccccc;
+  background-color: #ffffff;
   margin-bottom: 10px;
 }
 .Navber_btOver{
@@ -63,10 +63,10 @@ border-radius: 10px ;
   height: 40px;
   width: 85px;
   border: 0px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 5px 5px 5px 5px;
   color: rgb(44, 44, 44);
   background-color: rgb(95, 194, 255);
-  text-shadow: 2px 2px 4px #bebebe;
+  text-shadow: 2px 2px 4px #949393;
   margin-bottom: 10px;
 }
 .tob_Navber_icon{
@@ -99,4 +99,35 @@ justify-content: flex-end;
 .Home_Card{
   height: 50px;
   margin-bottom: 60px;
+}
+
+.Add_OK{
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  border: 0px;
+  border-radius: 50%;
+  background-color: rgba(98, 84, 255, 0.918);
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.Add_OK:hover{
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  border: 0px;
+  border-radius: 50%;
+  background-color: rgba(240, 32, 132, 0.918);
+  color: aliceblue;
+  font-size: 30px;
+}.Add_OK:active{
+  margin-top: 20px;
+  height: 100px;
+  width: 100px;
+  border: 0px;
+  border-radius: 50%;
+  background-color: rgba(44, 44, 44, 0.918);
+  color: aliceblue;
+  font-size: 30px;
 }

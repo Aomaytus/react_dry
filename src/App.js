@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Index from "./Page/Index";
-import Stat from "./Page/Navbar_tob";
+
 function App() {
   return (
     <div className="App">
